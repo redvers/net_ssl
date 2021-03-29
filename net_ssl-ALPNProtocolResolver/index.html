@@ -682,13 +682,13 @@
                 
                 
                 <h1 id="alpnprotocolresolver">ALPNProtocolResolver<a class="headerlink" href="#alpnprotocolresolver" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/net_ssl/alpn/#L13">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/alpn/#L21">[Source]</a></span></p>
 <p>Controls the protocol name to be chosen for incomming SSLConnections using the ALPN extension.</p>
 <pre><code class="language-pony">interface box ALPNProtocolResolver
 </code></pre>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="resolve">resolve<a class="headerlink" href="#resolve" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/alpn/#L17">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/alpn/#L25">[Source]</a></span></p>
 <pre><code class="language-pony">fun box resolve(
   advertised: Array[String val] val)
 : (String val | ALPNNoAck val | ALPNWarning val | 

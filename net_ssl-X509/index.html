@@ -802,12 +802,12 @@
                 
                 
                 <h1 id="x509">X509<a class="headerlink" href="#x509" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/net_ssl/x509/#L8">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/x509/#L29">[Source]</a></span></p>
 <pre><code class="language-pony">primitive val X509
 </code></pre>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/x509/#L8">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/x509/#L29">[Source]</a></span></p>
 <pre><code class="language-pony">new val create()
 : X509 val^
 </code></pre>
@@ -818,7 +818,7 @@
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="valid_for_host">valid_for_host<a class="headerlink" href="#valid_for_host" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/x509/#L9">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/x509/#L30">[Source]</a></span></p>
 <p>Checks if an OpenSSL X509 certificate is valid for a given host.</p>
 <pre><code class="language-pony">fun box valid_for_host(
   cert: Pointer[X509 val] ref,
@@ -836,7 +836,7 @@
 </ul>
 <hr />
 <h3 id="common_name">common_name<a class="headerlink" href="#common_name" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/x509/#L20">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/x509/#L41">[Source]</a></span></p>
 <p>Get the common name for the certificate. Raises an error if the common name
 contains any NULL bytes.</p>
 <pre><code class="language-pony">fun box common_name(
@@ -853,7 +853,7 @@ contains any NULL bytes.</p>
 </ul>
 <hr />
 <h3 id="all_names">all_names<a class="headerlink" href="#all_names" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/x509/#L42">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/x509/#L63">[Source]</a></span></p>
 <p>Returns an array of all names for the certificate. Any names containing
 NULL bytes are not included. This includes the common name and all subject
 alternate names.</p>
@@ -871,7 +871,7 @@ alternate names.</p>
 </ul>
 <hr />
 <h3 id="eq">eq<a class="headerlink" href="#eq" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/x509/#L9">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/x509/#L30">[Source]</a></span></p>
 <pre><code class="language-pony">fun box eq(
   that: X509 val)
 : Bool val
@@ -886,7 +886,7 @@ alternate names.</p>
 </ul>
 <hr />
 <h3 id="ne">ne<a class="headerlink" href="#ne" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/x509/#L9">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/x509/#L30">[Source]</a></span></p>
 <pre><code class="language-pony">fun box ne(
   that: X509 val)
 : Bool val

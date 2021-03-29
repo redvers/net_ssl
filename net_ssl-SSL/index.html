@@ -808,14 +808,14 @@
                 
                 
                 <h1 id="ssl">SSL<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L19">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L39">[Source]</a></span></p>
 <p>An SSL session manages handshakes, encryption and decryption. It is not tied
 to any transport layer.</p>
 <pre><code class="language-pony">class ref SSL
 </code></pre>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="alpn_selected">alpn_selected<a class="headerlink" href="#alpn_selected" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L74">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L94">[Source]</a></span></p>
 <p>Get the protocol identifier negotiated via ALPN</p>
 <pre><code class="language-pony">fun box alpn_selected()
 : (String val | None val)
@@ -826,7 +826,7 @@ to any transport layer.</p>
 </ul>
 <hr />
 <h3 id="state">state<a class="headerlink" href="#state" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L89">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L109">[Source]</a></span></p>
 <p>Returns the SSL session state.</p>
 <pre><code class="language-pony">fun box state()
 : (SSLHandshake val | SSLAuthFail val | SSLReady val | 
@@ -839,7 +839,7 @@ to any transport layer.</p>
 </ul>
 <hr />
 <h3 id="read">read<a class="headerlink" href="#read" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L95">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L115">[Source]</a></span></p>
 <p>Returns unencrypted bytes to be passed to the application. If <code>expect</code> is
 non-zero, the number of bytes returned will be exactly <code>expect</code>. If no data
 (or less than <code>expect</code> bytes) is available, this returns None.</p>
@@ -857,7 +857,7 @@ non-zero, the number of bytes returned will be exactly <code>expect</code>. If n
 </ul>
 <hr />
 <h3 id="write">write<a class="headerlink" href="#write" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L170">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L190">[Source]</a></span></p>
 <p>When application data is sent, add it to the SSL session. Raises an error
 if the handshake is not complete.</p>
 <pre><code class="language-pony">fun ref write(
@@ -874,7 +874,7 @@ if the handshake is not complete.</p>
 </ul>
 <hr />
 <h3 id="receive">receive<a class="headerlink" href="#receive" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L181">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L201">[Source]</a></span></p>
 <p>When data is received, add it to the SSL session.</p>
 <pre><code class="language-pony">fun ref receive(
   data: (String val | Array[U8 val] val))
@@ -890,7 +890,7 @@ if the handshake is not complete.</p>
 </ul>
 <hr />
 <h3 id="can_send">can_send<a class="headerlink" href="#can_send" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L200">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L220">[Source]</a></span></p>
 <p>Returns true if there are encrypted bytes to be passed to the destination.</p>
 <pre><code class="language-pony">fun ref can_send()
 : Bool val
@@ -901,7 +901,7 @@ if the handshake is not complete.</p>
 </ul>
 <hr />
 <h3 id="send">send<a class="headerlink" href="#send" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L206">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L226">[Source]</a></span></p>
 <p>Returns encrypted bytes to be passed to the destination. Raises an error
 if no data is available.</p>
 <pre><code class="language-pony">fun ref send()
@@ -913,7 +913,7 @@ if no data is available.</p>
 </ul>
 <hr />
 <h3 id="dispose">dispose<a class="headerlink" href="#dispose" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl/#L218">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl/#L238">[Source]</a></span></p>
 <p>Dispose of the session.</p>
 <pre><code class="language-pony">fun ref dispose()
 : None val

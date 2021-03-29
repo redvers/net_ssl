@@ -1036,13 +1036,13 @@
                 
                 
                 <h1 id="sslcontext">SSLContext<a class="headerlink" href="#sslcontext" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L50">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L73">[Source]</a></span></p>
 <p>An SSL context is used to create SSL sessions.</p>
 <pre><code class="language-pony">class val SSLContext
 </code></pre>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L58">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L81">[Source]</a></span></p>
 <p>Create an SSL context.</p>
 <pre><code class="language-pony">new ref create()
 : SSLContext ref^
@@ -1054,7 +1054,7 @@
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="client">client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L100">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L123">[Source]</a></span></p>
 <p>Create a client-side SSL session. If a hostname is supplied, the server
 side certificate must be valid for that hostname.</p>
 <pre><code class="language-pony">fun box client(
@@ -1071,7 +1071,7 @@ side certificate must be valid for that hostname.</p>
 </ul>
 <hr />
 <h3 id="server">server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L109">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L132">[Source]</a></span></p>
 <p>Create a server-side SSL session.</p>
 <pre><code class="language-pony">fun box server()
 : SSL iso^ ?
@@ -1082,7 +1082,7 @@ side certificate must be valid for that hostname.</p>
 </ul>
 <hr />
 <h3 id="set_cert">set_cert<a class="headerlink" href="#set_cert" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L117">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L140">[Source]</a></span></p>
 <p>The cert file is a PEM certificate chain. The key file is a private key.
 Servers must set this. For clients, it is optional.</p>
 <pre><code class="language-pony">fun ref set_cert(
@@ -1101,7 +1101,7 @@ Servers must set this. For clients, it is optional.</p>
 </ul>
 <hr />
 <h3 id="set_authority">set_authority<a class="headerlink" href="#set_authority" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L135">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L158">[Source]</a></span></p>
 <p>Use a PEM file and/or a directory of PEM files to specify certificate
 authorities. Clients must set this. For servers, it is optional. Use None
 to indicate no file or no path. Raises an error if these verify locations
@@ -1124,7 +1124,7 @@ system root certificates. On Posix it raises an error.</p>
 </ul>
 <hr />
 <h3 id="set_ciphers">set_ciphers<a class="headerlink" href="#set_ciphers" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L210">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L229">[Source]</a></span></p>
 <p>Set the accepted ciphers. This replaces the existing list. Raises an error
 if the cipher list is invalid.</p>
 <pre><code class="language-pony">fun ref set_ciphers(
@@ -1141,7 +1141,7 @@ if the cipher list is invalid.</p>
 </ul>
 <hr />
 <h3 id="set_client_verify">set_client_verify<a class="headerlink" href="#set_client_verify" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L222">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L241">[Source]</a></span></p>
 <p>Set to true to require verification. Defaults to true.</p>
 <pre><code class="language-pony">fun ref set_client_verify(
   state: Bool val)
@@ -1157,7 +1157,7 @@ if the cipher list is invalid.</p>
 </ul>
 <hr />
 <h3 id="set_server_verify">set_server_verify<a class="headerlink" href="#set_server_verify" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L228">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L247">[Source]</a></span></p>
 <p>Set to true to require verification. Defaults to false.</p>
 <pre><code class="language-pony">fun ref set_server_verify(
   state: Bool val)
@@ -1173,7 +1173,7 @@ if the cipher list is invalid.</p>
 </ul>
 <hr />
 <h3 id="set_verify_depth">set_verify_depth<a class="headerlink" href="#set_verify_depth" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L234">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L253">[Source]</a></span></p>
 <p>Set the verify depth. Defaults to 6.</p>
 <pre><code class="language-pony">fun ref set_verify_depth(
   depth: U32 val)
@@ -1189,7 +1189,7 @@ if the cipher list is invalid.</p>
 </ul>
 <hr />
 <h3 id="set_min_proto_version">set_min_proto_version<a class="headerlink" href="#set_min_proto_version" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L242">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L261">[Source]</a></span></p>
 <p>Set minimum protocol version. Set to SslAutoVersion, 0,
 to automatically manage lowest version.</p>
 <p>Supported versions: Ssl3Version, Tls1Version, Tls1u1Version,
@@ -1209,7 +1209,7 @@ to automatically manage lowest version.</p>
 </ul>
 <hr />
 <h3 id="get_min_proto_version">get_min_proto_version<a class="headerlink" href="#get_min_proto_version" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L257">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L276">[Source]</a></span></p>
 <p>Get minimum protocol version. Returns SslAutoVersion, 0,
 when automatically managing lowest version.</p>
 <p>Supported versions: Ssl3Version, Tls1Version, Tls1u1Version,
@@ -1224,7 +1224,7 @@ when automatically managing lowest version.</p>
 </ul>
 <hr />
 <h3 id="set_max_proto_version">set_max_proto_version<a class="headerlink" href="#set_max_proto_version" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L268">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L287">[Source]</a></span></p>
 <p>Set maximum protocol version. Set to SslAutoVersion, 0,
 to automatically manage higest version.</p>
 <p>Supported versions: Ssl3Version, Tls1Version, Tls1u1Version,
@@ -1244,7 +1244,7 @@ to automatically manage higest version.</p>
 </ul>
 <hr />
 <h3 id="get_max_proto_version">get_max_proto_version<a class="headerlink" href="#get_max_proto_version" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L283">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L302">[Source]</a></span></p>
 <p>Get maximum protocol version. Returns SslAutoVersion, 0,
 when automatically managing highest version.</p>
 <p>Supported versions: Ssl3Version, Tls1Version, Tls1u1Version,
@@ -1259,7 +1259,7 @@ when automatically managing highest version.</p>
 </ul>
 <hr />
 <h3 id="alpn_set_resolver">alpn_set_resolver<a class="headerlink" href="#alpn_set_resolver" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L294">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L313">[Source]</a></span></p>
 <p>Use <code>resolver</code> to choose the protocol to be selected for incomming connections.</p>
 <p>Returns true on success
 Requires OpenSSL &gt;= 1.0.2</p>
@@ -1277,7 +1277,7 @@ Requires OpenSSL &gt;= 1.0.2</p>
 </ul>
 <hr />
 <h3 id="alpn_set_client_protocols">alpn_set_client_protocols<a class="headerlink" href="#alpn_set_client_protocols" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L311">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L330">[Source]</a></span></p>
 <p>Configures the SSLContext to advertise the protocol names defined in <code>protocols</code> when connecting to a server
 protocol names must have a size of 1 to 255</p>
 <p>Returns true on success
@@ -1296,7 +1296,7 @@ Requires OpenSSL &gt;= 1.0.2</p>
 </ul>
 <hr />
 <h3 id="allow_tls_v1">allow_tls_v1<a class="headerlink" href="#allow_tls_v1" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L367">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L386">[Source]</a></span></p>
 <p>Allow TLS v1. Defaults to false.
 Deprecated: use set_min_proto_version and set_max_proto_version</p>
 <pre><code class="language-pony">fun ref allow_tls_v1(
@@ -1313,7 +1313,7 @@ Deprecated: use set_min_proto_version and set_max_proto_version</p>
 </ul>
 <hr />
 <h3 id="allow_tls_v1_1">allow_tls_v1_1<a class="headerlink" href="#allow_tls_v1_1" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L380">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L399">[Source]</a></span></p>
 <p>Allow TLS v1.1. Defaults to false.
 Deprecated: use set_min_proto_version and set_max_proto_version</p>
 <pre><code class="language-pony">fun ref allow_tls_v1_1(
@@ -1330,7 +1330,7 @@ Deprecated: use set_min_proto_version and set_max_proto_version</p>
 </ul>
 <hr />
 <h3 id="allow_tls_v1_2">allow_tls_v1_2<a class="headerlink" href="#allow_tls_v1_2" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L393">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L412">[Source]</a></span></p>
 <p>Allow TLS v1.2. Defaults to true.
 Deprecated: use set_min_proto_version and set_max_proto_version</p>
 <pre><code class="language-pony">fun ref allow_tls_v1_2(
@@ -1347,7 +1347,7 @@ Deprecated: use set_min_proto_version and set_max_proto_version</p>
 </ul>
 <hr />
 <h3 id="dispose">dispose<a class="headerlink" href="#dispose" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L406">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/ssl_context/#L425">[Source]</a></span></p>
 <p>Free the SSL context.</p>
 <pre><code class="language-pony">fun ref dispose()
 : None val

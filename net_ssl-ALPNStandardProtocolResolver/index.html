@@ -814,7 +814,7 @@
                 
                 
                 <h1 id="alpnstandardprotocolresolver">ALPNStandardProtocolResolver<a class="headerlink" href="#alpnstandardprotocolresolver" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/net_ssl/alpn/#L19">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/alpn/#L27">[Source]</a></span></p>
 <p>Implements the standard protocol selection akin to the OpenSSL function <code>SSL_select_next_proto</code>.</p>
 <pre><code class="language-pony">class val ALPNStandardProtocolResolver is
   ALPNProtocolResolver box
@@ -826,7 +826,7 @@
 <hr />
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/alpn/#L26">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/alpn/#L34">[Source]</a></span></p>
 <pre><code class="language-pony">new val create(
   supported': Array[String val] val,
   use_client_as_fallback': Bool val = true)
@@ -844,14 +844,14 @@
 <hr />
 <h2 id="public-fields">Public fields<a class="headerlink" href="#public-fields" title="Permanent link">&para;</a></h2>
 <h3 id="let-supported-arraystring-val-val">let supported: <a href="https://stdlib.ponylang.io/builtin-Array/">Array</a>[<a href="https://stdlib.ponylang.io/builtin-String/">String</a> val] val<a class="headerlink" href="#let-supported-arraystring-val-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/alpn/#L23">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/alpn/#L31">[Source]</a></span></p>
 <hr />
 <h3 id="let-use_client_as_fallback-bool-val">let use_client_as_fallback: <a href="https://stdlib.ponylang.io/builtin-Bool/">Bool</a> val<a class="headerlink" href="#let-use_client_as_fallback-bool-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/alpn/#L24">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/alpn/#L32">[Source]</a></span></p>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="resolve">resolve<a class="headerlink" href="#resolve" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/net_ssl/alpn/#L33">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/net_ssl/alpn/#L41">[Source]</a></span></p>
 <pre><code class="language-pony">fun box resolve(
   advertised: Array[String val] val)
 : (String val | ALPNNoAck val | ALPNWarning val | 
